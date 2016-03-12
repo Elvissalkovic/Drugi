@@ -1,0 +1,240 @@
+
+#section1{ 
+
+
+
+
+background:url("../../img/pozadina2.png");
+	background-size: cover;
+	 background-repeat: no-repeat;
+
+
+
+
+
+.header{
+	
+	background:$primarna-boja;
+	height:50px;
+
+}
+
+
+
+#menu li.active a{
+
+	background: blue !important;
+	
+
+}
+
+
+
+
+
+#menu li.active{
+	background: #bc0008 !important;
+	
+	color: white;
+	
+
+}
+
+
+.footer{
+	background-color: rgba(255, 255, 255, 0.89);
+	height:25% !important;
+	width:100%;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	
+}
+
+
+
+	.meni  {
+	margin-left:100px;
+
+	
+
+
+
+
+
+p{
+	
+	   
+	    
+	    text-align:center;
+	    margin-right:10px;
+
+}
+
+		.prva{
+		
+	padding-top: 10px;
+
+
+		}
+
+		.druga{
+		
+	padding-top: 11px;
+
+
+		}
+		.treca{
+		
+	padding-top: 4px;
+
+
+		}
+		.cetvrta{
+		
+	padding-top: 3px;
+
+
+		}
+		.peta{
+		
+	padding-top: 3px;
+
+
+		}
+		.sesta{
+		
+	padding-top: 6px;
+
+
+		}
+		.sedma{
+		
+	padding-top: 3px;
+
+
+		}
+		.osma{
+		
+	padding-top: 2px;
+
+
+		}
+		.deveta{
+		
+	padding-top: 13px;
+
+
+		}
+		.deseta{
+		
+	padding-top: 6px;
+
+
+		}
+
+
+
+	}
+
+
+
+	}
+
+
+
+.slider-pravougaonik{
+	
+	
+	    height: 433px;
+    width: 704px;
+	position:absolute !important;
+	margin-left:25%;
+
+
+}
+	
+
+.slider-krug{
+	
+	background-color: rgba(0, 0, 0, 0.75) !important;
+	height:380px !important;
+	width:380px !important;
+	position:relative !important;
+	border-radius:100% !important;
+	margin-top:30px !important;
+	margin-left:35% !important;
+	text-align:center !important;
+	color:white !important;
+
+	p{
+
+
+	
+    font-size: 11px;
+
+	}
+
+
+}
+	
+
+	.prev{
+
+
+
+	background: url('../../img/lijeva.png') no-repeat;
+	}
+
+	.next{
+
+
+
+	background: url('../../img/desna.png') no-repeat;
+	}
+
+
+	.slick-prev, .slick-next {
+    
+    width: 100px !important;
+
+
+    }
+
+.slick-slide img {
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+.slick-slide {
+    
+    margin-top: 40px;
+}
+
+.slider-pravougaonik .slick-track {
+	
+	 margin-top: -40px;
+}
+
+        .footer .meni li a{
+
+        color:black;
+        }
+
+
+       .footer .meni li a:hover{
+
+       		background:#dd0008;
+       		color:white !important;
+
+
+#section1 .meni p {
+    text-align: center !important;
+    margin-right: 0px !important;
+    font-size: 14px !important;
+}
+
+       }
+
+
+     

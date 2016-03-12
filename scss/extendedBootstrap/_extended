@@ -1,0 +1,41 @@
+.veci_dio{
+
+@extend .col-md-9;
+
+}
+
+.idi-desno{
+
+@extend .pull-right;
+
+}
+
+
+.manji_dio{
+	
+
+@extend .col-md-3;
+
+}
+
+
+
+.vrsta{
+
+@extend .row;
+
+}
+
+
+
+.idi-lijevo{
+
+		@extend .pull-left;
+
+	}
+
+	.jednak-dio{
+
+		@extend .col-md-6;
+
+	}

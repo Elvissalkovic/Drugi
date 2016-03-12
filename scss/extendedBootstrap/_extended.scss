@@ -1,0 +1,21 @@
+.meni{
+
+@extend .nav;
+
+}
+
+.navigacija{
+	
+
+
+	@extend .navbar-nav;
+}
+
+
+.idi-desno{
+
+@extend .pull-right;
+
+}
+
+

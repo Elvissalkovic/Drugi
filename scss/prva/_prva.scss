@@ -1,0 +1,153 @@
+#section0{
+	
+background:url("../../img/pozadinska.png");
+background-size:cover;
+
+.medij{
+	
+
+	margin-left:100px;
+	width:300px;
+}
+
+
+
+h4{
+	
+	color:white;
+
+
+	margin-top: 210px;
+   
+    margin-left: 300px;
+    font-size:36px;
+
+}
+}
+
+
+
+
+
+
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: white;
+
+	
+	
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+#menu li.active{
+	background: rgba(221,0,8, 0.8);
+	
+	color: white;
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+
+}
+#menu li a{
+position: relative;
+	
+	color: white;
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+#menu li.active a:hover{
+
+
+    -moz-text-decoration-color: white; /* Code for Firefox */
+    text-decoration-color: white;
+text-decoration-width: medium; 
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+           
+}
+
+#menu li:hover{
+
+    -moz-text-decoration-color: white; /* Code for Firefox */
+    text-decoration-color: white;
+   
+
+	 background:none !important;
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+#menu a:hover {
+    background: none;
+}
+
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+
+}
+#menu li.active a{
+position: relative;
+	background: rgba(221,0,8, 0.8);
+	-webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+#menu{
+	position:fixed;
+	top:0;
+	left:800px;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+	margin-top:0px;
+}
+
+
+
+#menu a:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  bottom: 3px;
+  left: 10%;
+
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+
+
+
+#menu a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(1);
+}
+
+
+.slajder{
+	
+width:375px;
+height:115px;
+background-color: rgba(0, 0, 0, 0.5);
+
+margin-left:306px;
+color:white;
+@include dodaj-ivicu(3px, red, top);
+
+}
+
+

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Arhimed</title>
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+	<link rel="stylesheet" href="https://material.angularjs.org/1.0.5/docs.css">
+
+	
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage.js using CSS3 transformations." />
+	<meta name="keywords"  content="fullpage,jquery,anchor,links,inside,demo,css,css3" />
+	<meta name="Resource-type" content="Document" />
+
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/scss/main.css" />
+	
+
+	<link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick.css"/>
+
+	<link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick-theme.css"/>
+
+	
+	
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+	<script src="js/parallax.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript" src="slick-1.5.9/slick/slick.js"></script>
+
+<script type="text/javascript" src="slick-1.5.9/slick/slick.min.js"></script>
+
+
+<script type="text/javascript" src="js/java.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript" src="js/googleMAPA.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    
+    
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    
+    <script src=" http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+
+
+
+     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+
+<script type="text/javascript">    
+    
+    
+angular.module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+  .controller('DemoCtrl', function($scope) {
+    $scope.user = {
+      title: '',
+      kompanija: '',
+      email: '',
+      telefon: '',
+      poruka: '',
+      password:'',
+      ime:'',
+      name:'',
+      tel:'',
+      
+    };
+
+    $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+    'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+    'WY').split(' ').map(function(state) {
+        return {abbrev: state};
+      })
+  })
+  .config(function($mdThemingProvider) {
+
+    // Configure a dark theme with primary foreground yellow
+
+    $mdThemingProvider.theme('docs-dark', 'default')
+      .primaryPalette('blue')
+      .dark();
+
+  });
+
+
+
+  </script>
+
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000,
+				css3: true
+			});
+
+		});
+	</script>
+	
+
+
+</head>
+<body ng-app="MyApp" ng-controller="DemoCtrl" >
+
+
+
+
+
+<div id="fullpage">
+	<div class="section " id="section0">
+
+	
+		
+
+
+		<ul id="menu"class="meni navigacija idi-desno">
+	<li data-menuanchor="firstPage"><a class="active" href="#firstPage">Uloguj se</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Usluge</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Trial</a></li>
+	<li data-menuanchor="4thpage"><a href="#4thpage">Kontakt</a></li>
+</ul>
+
+
+	
+
+		<h4>Digitalna arhiva od preko <br>
+2 miliona novinskih članaka,<br> 560 hiljada TV priloga <br>
+i emisija, kao i preko<br> 
+1 milion web<br>
+članaka</h4>
+
+
+<div class="forma1">
+
+
+			<div  layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage" >
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="">
+
+
+    <div>
+
+
+   <img src="img/arhimed.png">
+   <br><br><br>
+      <md-input-container>
+        <label>Korisničko ime </label>
+        <input ng-model="user.ime">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Šifra </label>
+        <input ng-model="user.password">
+      </md-input-container>
+
+      
+
+
+      <md-button class="md-raised md-primary">Uloguj se</md-button>
+
+      <p class="slova">Ne možeš se ulogovati <a href="#">Kontaktiraj nas</a> </p>
+
+
+    </div>
+		</md-content>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="slajder">
+
+
+	 
+  <div><h3>Ovdje stoji naslov nekog članka
+ili neke objave ili TV priloga</h3></div>
+
+  <div><h3>Ovdje stoji naslov nekog drugog članka
+ili neke objave ili TV priloga</h3></div>
+
+  <div><h3>Ovdje stoji naslov nekog trećeg članka
+ili neke objave ili TV priloga</h3></div>
+
+  <div><h3>Ovdje stoji naslov nekog četvrtog članka
+ili neke objave ili TV priloga</h3></div>
+
+  <div><h3>Ovdje stoji naslov nekog petog članka
+ili neke objave ili TV priloga</h3></div>
+
+  <div><h3>Ovdje stoji naslov nekog šestog članka
+ili neke objave ili TV priloga</h3></div>
+
+
+
+</div>
+
+		
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+
+
+			<div class="header">
+			</div>
+			<div class="slider-pravougaonik">
+
+			<div> <p><img data-lazy="img/Parhiva_medija.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Ppress_clipping.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Ppress_diggest.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Palert_clipping.png"/> </p></div>
+
+
+  			<div> <p><img data-lazy="img/Panaliza_medija.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Pmonitoring_reklamiranja.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Psocial_media.png"/> </p></div>
+
+  			<div> <p><img data-lazy="img/Pistrazivanje.png"/> </p></div>
+
+
+  			<div> <p><img data-lazy="img/Pprevod.png"/> </p></div>
+
+  			<div> <p><img data-ladata-lazyzy="img/Ptranskript.png"/> </p></div>
+
+
+  
+
+
+
+</div>
+
+
+			<div class="slider-krug">
+
+			<div><img data-lazy="img/arhiva_medija.png"/> <br>
+				<h2>Arhiva medija</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+			</div>
+
+  			<div> <img data-lazy="img/press_clipping.png"/> 
+
+  				<br>
+				<h2>Press Clipping</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+  			</div>
+
+  			<div> <img data-lazy="img/press_diggest.png"/> 
+
+
+  				<br>
+				<h2>Press Digest</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+  			</div>
+
+  			<div> <img data-lazy="img/alert_clipping.png"/> 
+
+
+
+  				<br>
+				<h2>Alert Clipping</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+  			</div>
+
+
+  			<div> <img data-lazy="img/analiza_medija.png"/> 
+
+
+  				<br>
+				<h2>Analiza Medija</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+
+  			</div>
+
+  			<div> <img data-lazy="img/monitoring_reklamiranja.png"/> 
+
+  				<br>
+				<h2>Monitoring Reklamiranja</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+  			</div>
+
+  			<div> <img data-lazy="img/social_media.png"/> 
+
+  				<br>
+				<h2>Social media analize</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+  			</div>
+
+  			<div> <img data-lazy="img/istrazivanje.png"/> 
+
+
+
+  				<br>
+				<h2>Istraživanje Tržišta</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+  			</div>
+
+
+  			
+
+
+
+  			<div> <img data-lazy="img/prevod.png"/> 
+
+
+  			<br>
+				<h2>Prevod</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+  					
+
+
+  			</div>
+
+  			<div> <img data-lazy="img/transkript.png"/>
+
+  			<br>
+  				<h2>Transkript</h2>
+				<p>Prva digitalizovana arhiva medijskih sadržaja <br>
+u Crnoj Gori koja sadrži jedinstvenu bazu <br>
+članaka i emisija. Klijenti bazu mogu pretraživati <br>
+po velikom broju parametara, uključujući i <br>
+ključne riječi, osobe, institucije, teme, medij <br>
+ili period objave.</p> 
+
+
+
+  			 </div>
+
+  			
+
+			</div>
+
+			</div>
+
+
+
+			<div class="footer">
+				
+				<ul class="meni navigacija ">
+	<li class="banner1"><a class="active" href="#"> <p><img id="banner1" src="img/ikonica1.png"/></p><br> <p class="prva">Arhiva <br> medija</p> </a></li>
+	<li class="banner2"><a href="#"> <p class="druga"><img id="banner2" src="img/ikonica2.png"/></p><br><p>Press<br> clipping</p></a></li>
+	<li class="banner3"><a href="#"> <p class="treca"><img id="banner3" src="img/ikonica3.png"/></p><br><p>Press <br>digest</p></a></li>
+	<li class="banner4"><a href="#"> <p class="cetvrta"><img id="banner4"  src="img/ikonica4.png"/></p><br><p>Alert <br>clipping</p></a></li>
+	<li class="banner5"><a href="#"> <p class="peta"><img id="banner5" src="img/ikonica5.png"/></p><br><p>Analiza<br> medija</p></a></li>
+	<li class="banner6"><a href="#"> <p class="sesta"><img id="banner6" src="img/ikonica6.png"/></p><br><p>Monitoring <br>reklamiranja</p></a></li>
+	<li class="banner7"><a href="#"> <p class="sedma"><img id="banner7" src="img/ikonica7.png"/></p><br><p>Monitoring <br>i analiza</p></a></li>
+	<li class="banner8"><a href="#"> <p class="osma"><img id="banner8" src="img/ikonica8.png"/></p><br><p>Istraživanje <br>tržišta</p></a></li>
+	<li class="banner9"><a href="#"> <p class="deveta"><img id="banner9" src="img/ikonica9.png"/></p> <br><p>Prevod</p>  </a></li>
+	<li class="banner10"><a href="#"> <p class="deseta"><img id="banner10" src="img/ikonica10.png"/></p><br><p>Transkript</p></a></li>
+	
+
+</ul>
+			</div>
+				
+
+			
+			
+			
+		
+
+		</div>
+	
+	<div class="section" id="section2">
+		<div class="intro">
+
+		<div class="header">
+				
+
+			</div>
+
+
+<div class="forma">
+
+
+			<div  layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage" >
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="">
+
+
+    <div>
+
+      <md-input-container>
+        <label>Vaše ime <span class="span">*</span></label>
+        <input ng-model="user.title">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Kompanija <span class="span">*</span></label>
+        <input ng-model="user.kompanija">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email <span class="span">*</span></label>
+        <input ng-model="user.email" type="email">
+      </md-input-container>
+
+
+      <md-input-container>
+        <label>Telefon <span class="span">*</span></label>
+        <input ng-model="user.telefon" type="email">
+      </md-input-container>
+
+
+      <md-input-container>
+        <label>Poruka <span class="span">*</span></label>
+        <input ng-model="user.poruka" type="email">
+      </md-input-container>
+
+
+      <md-button class="md-raised md-primary">Prijavi se</md-button>
+
+
+    </div>
+</md-content>
+    </div>
+    </div>
+
+
+
+		
+
+</div>
+
+
+
+			
+			<h1>Provjerite zašto klijenti kažu<br> da je naš press clipping<br> nezamjenjiv alat u<br> svakodnevnom 
+poslu !</h1>
+			
+			<div class="reklama">
+			<h1 class="sedam">7</h1>
+			<h1 class="dana">DANA</h1><br>
+			<h1 class="gratis">GRATIS</h1><br>
+			<p class="tekst">za sve kompanije <br> i institucije</p>
+			
+			
+			</div>
+
+
+
+  
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	<div class="section" id="section3">
+		<div class="intro">
+			<div class="header">
+				
+
+			</div>
+			<div class="forma2">
+
+
+			<div  layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage" >
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="">
+
+
+    <div>
+
+
+      
+   	<p class="pitanje">Imate pitanje za nas?</p>
+
+
+<div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Vaše ime</label>
+            <input ng-model="user.firstName">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Email</label>
+            <input ng-model="theMax">
+          </md-input-container>
+</div>
+
+
+<div layout-gt-sm="row">
+         <md-input-container>
+        <label>Telefon </label>
+        <input ng-model="user.name">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Poruka </label>
+        <input ng-model="user.tel">
+      </md-input-container>
+</div>
+
+
+      
+
+      
+
+
+      <md-button class="md-raised md-primary">Pošalji poruku</md-button>
+
+     </div>
+     </md-content>
+
+
+    </div>
+
+    </div>
+    
+
+
+
+				 <div id="map" style="width:700px;height:350px;"></div>
+
+				 
+
+
+
+      
+
+
+     
+
+				 <div class="crno">
+				 	
+				 	<h1>Arhimed d.o.o.</h1>
+				 	<p>
+Ulica Vlaha Bukovca br. 48, Stari aerodrom </p>
+					<p>81000 Podgorica, Crna Gora</p>
+					<p>Tel: +382 (20) 240 077  /  Mob: +382 (0)67 255 835</p>
+					<p>info@arhimed.me</p>
+					<p>www.arhimed.me</p>
+					<br>
+					<p>Pib: 02882922  /  Pdv: 30/31-11354-6</p>
+					<p>Ž.r. 520-19719-88 - Hipotekarna banka Pg.</p>
+					
+					<img src="img/infoslika.png"/>
+
+				 </div>
+
+		</div>
+</div>
+
+
+</body>
+</html>
